@@ -1,5 +1,7 @@
+package ru.yandex.praktikum.scooter;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.pageObjects.MainPage;
+import ru.yandex.praktikum.scooter.scooter.pageobjects.MainPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +39,7 @@ public class MainPageFAQLinksTests {
 
     // Проверка ссылки на логотип "Яндекс"
     @Test
-    public void checkYandexLinkIsCorrect() {
+    public void checkYandexLinkIsCorrectTest() {
         MainPage mainPage = new MainPage(this.webDriver);
 
         // Проверяем, что ссылка ведет на ожидаемый URL
@@ -55,7 +57,7 @@ public class MainPageFAQLinksTests {
 
     // Проверка ссылки на логотип "Самокат"
     @Test
-    public void checkScooterLinkIsCorrect() {
+    public void checkScooterLinkIsCorrectTest() {
         MainPage mainPage = new MainPage(this.webDriver);
 
         // Проверяем, что ссылка ведет на ожидаемый URL

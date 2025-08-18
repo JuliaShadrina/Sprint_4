@@ -1,7 +1,9 @@
+package ru.yandex.praktikum.scooter;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.pageObjects.MainPage;
-import org.pageObjects.OrderPage;
+import ru.yandex.praktikum.scooter.scooter.pageobjects.MainPage;
+import ru.yandex.praktikum.scooter.scooter.pageobjects.OrderPage;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
@@ -107,7 +109,7 @@ public class OrderPageTests {
 
     // Проверка оформления заказа через кнопку "Заказать" в шапке
     @Test
-    public void orderWithHeaderButtonWhenSuccess() {
+    public void orderWithHeaderButtonWhenSuccessTest() {
         MainPage mainPage = new MainPage(this.webDriver);
         OrderPage orderPage = new OrderPage(this.webDriver);
 
@@ -128,7 +130,7 @@ public class OrderPageTests {
 
     // Проверка оформления заказа через кнопку "Заказать" в теле сайта
     @Test
-    public void orderWithBodyButtonWhenSuccess() {
+    public void orderWithBodyButtonWhenSuccessTest() {
         MainPage mainPage = new MainPage(this.webDriver);
         OrderPage orderPage = new OrderPage(this.webDriver);
 

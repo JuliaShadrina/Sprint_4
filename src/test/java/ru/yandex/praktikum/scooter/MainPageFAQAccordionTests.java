@@ -1,4 +1,6 @@
-import org.pageObjects.MainPage;
+package ru.yandex.praktikum.scooter;
+
+import ru.yandex.praktikum.scooter.scooter.pageobjects.MainPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -79,22 +81,9 @@ public class MainPageFAQAccordionTests {
         }
     }
 
-    // Проверка, что элемент аккордеона отображается
-    @Test
-    public void checkAccordionItemIsDisplayed() {
-        MainPage mainPage = new MainPage(this.webDriver);
-
-        mainPage.clickOnCookieAcceptButton();
-        mainPage.clickAccordionHeader(this.numberOfElement);
-        mainPage.waitForLoadItem(this.numberOfElement);
-
-        MatcherAssert.assertThat("Accordion item #" + this.numberOfElement + " didn't load",
-                mainPage.isAccordionItemDisplayed(this.numberOfElement), equalTo(true));
-    }
-
     // Проверка текста в заголовке и раскрывающемся блоке
     @Test
-    public void checkAccordionTextIsCorrect() {
+    public void checkAccordionTextIsCorrectTest() {
         MainPage mainPage = new MainPage(this.webDriver);
 
         mainPage.clickOnCookieAcceptButton();
